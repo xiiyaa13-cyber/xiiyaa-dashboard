@@ -1,0 +1,17 @@
+{
+  "name": "xiiyaa-dashboard",
+  "version": "1.0.0",
+  "description": "xiiyaa.net — Market intelligence, distilled.",
+  "private": true,
+  "scripts": {
+    "fetch": "node build/fetch-data.js",
+    "build": "node build/build.js",
+    "update": "npm run fetch && npm run build"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "dotenv": "^16.3.1"
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "bigPicture": "Markets are consolidating. Add NEWS_API_KEY and other keys to enable live data. See README for setup.",
+  "marketMood": "Risk-off",
+  "fearGreed": {
+    "value": 17,
+    "label": "Extreme Fear"
+  },
+  "trendingNews": [
+    "Markets await key economic data",
+    "Fed policy in focus",
+    "Add API keys for live headlines"
+  ],
+  "topHeadlines": [
+    {
+      "source": "Reuters",
+      "title": "Markets digest Fed decision"
+    },
+    {
+      "source": "Bloomberg",
+      "title": "Add NEWS_API_KEY for live data"
+    }
+  ],
+  "segments": [
+    {
+      "name": "Global Markets",
+      "direction": "flat",
+      "description": "Add API keys for live data."
+    },
+    {
+      "name": "Currencies",
+      "direction": "flat",
+      "description": "Add API keys for live data."
+    },
+    {
+      "name": "Digital Assets",
+      "direction": "flat",
+      "description": "Add API keys for live data."
+    },
+    {
+      "name": "Energy & Materials",
+      "direction": "flat",
+      "description": "Add API keys for live data."
+    },
+    {
+      "name": "U.S. Growth & Tech",
+      "direction": "flat",
+      "description": "Add API keys for live data."
+    }
+  ],
+  "updatedAt": "2026-02-03T19:04:53.359Z"
+}
