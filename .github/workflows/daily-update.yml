@@ -39,6 +39,10 @@ jobs:
           FMP_API_KEY: ${{ secrets.FMP_API_KEY }}
         run: npm run update
 
+      - name: Pull latest changes
+        run: |
+          git pull origin main --rebase
+
       - name: Commit and push
         run: |
           git config user.name "github-actions[bot]"

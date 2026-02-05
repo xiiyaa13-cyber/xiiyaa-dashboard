@@ -220,6 +220,39 @@ section h2 {
   border-bottom: 1px solid var(--border);
 }
 
+/* Today's Market Drivers — tight, scannable strip */
+.market-drivers {
+  margin-bottom: 2rem;
+}
+
+.market-drivers .market-drivers-title {
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--text-muted);
+  margin: 0 0 0.75rem 0;
+  padding-bottom: 0.35rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.driver-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.driver-list .driver-item {
+  padding: 0.4rem 0;
+  font-size: 0.9rem;
+  color: var(--text);
+  border-bottom: 1px solid var(--border);
+}
+
+.driver-list .driver-item:last-child {
+  border-bottom: none;
+}
+
 /* At-a-glance / Market mood */
 .at-a-glance {
   margin-bottom: 2.5rem;

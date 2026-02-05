@@ -123,15 +123,62 @@ function dateToShort(ymd) {
   return `${MONTHS[m - 1].slice(0, 3)} ${d}, ${y}`;
 }
 
-function getArchiveList() {
+function getArchiveList(includeDate = null) {
   const files = fs.readdirSync(ROOT);
-  const dated = files
+  let dated = files
     .filter(f => /^\d{4}-\d{2}-\d{2}\.html$/.test(f))
     .map(f => f.replace('.html', ''))
     .sort()
     .reverse();
+  if (includeDate && !dated.includes(includeDate)) {
+    dated = [includeDate, ...dated];
+  }
   return dated
     .map(ymd => `        <li><a href="${ymd}.html">${dateToLabel(ymd)}</a></li>`)
+    .join('\n');
+}
+
+/** Derive 3–4 "Today's Market Drivers" from segments + fear/greed, or use data.marketDrivers if present. */
+function getMarketDrivers(data) {
+  if (Array.isArray(data.marketDrivers) && data.marketDrivers.length > 0) {
+    return data.marketDrivers.slice(0, 5);
+  }
+  const segments = data.segments || [];
+  const byName = (name) => segments.find(s => s.name === name);
+  const fg = data.fearGreed?.value ?? 50;
+  const fgLabel = data.fearGreed?.label ?? 'Neutral';
+  const drivers = [];
+
+  const dirShort = (d) => (d === 'up' ? '↑' : d === 'down' ? '↓' : '—');
+  const one = (label, seg) => {
+    if (!seg) return null;
+    const d = seg.direction || 'flat';
+    const desc = (seg.description || '').split(/[.;]/)[0].trim();
+    const skipDesc = !desc || desc.length > 40 || /temporarily unavailable|add api|government bonds and credit/i.test(desc);
+    if (!skipDesc) return `${label}: ${dirShort(d)} ${desc}`;
+    if (d === 'flat') return `${label}: ${dirShort(d)}`;
+    return `${label}: ${dirShort(d)} ${d === 'up' ? 'higher' : 'lower'}`;
+  };
+
+  const rates = one('Rates', byName('Bonds & Rates'));
+  if (rates) drivers.push(rates);
+  const tech = one('Tech', byName('U.S. Growth & Tech')) || one('Crypto', byName('Digital Assets'));
+  if (tech) drivers.push(tech);
+  const macro = one('Macro', byName('Global Markets'));
+  if (macro) drivers.push(macro);
+  const fx = one('FX', byName('Currencies'));
+  if (fx && drivers.length < 3) drivers.push(fx);
+
+  const volText = fg <= 25 ? 'Elevated, skew bearish' : fg >= 60 ? 'Subdued, risk-on' : 'Neutral';
+  drivers.push(`Volatility: ${volText} (F&G ${fg} ${fgLabel})`);
+
+  return drivers.slice(0, 4);
+}
+
+function renderMarketDrivers(drivers) {
+  if (!drivers?.length) return '';
+  return drivers
+    .map(d => `        <li class="driver-item">${escapeHtml(d)}</li>`)
     .join('\n');
 }
 
@@ -176,6 +223,17 @@ function main() {
   const fgLabel = escapeHtml(data.fearGreed?.label ?? 'Neutral');
   const fgClass = (data.fearGreed?.value ?? 50) < 50 ? 'fear' : 'greed';
 
+  const marketDrivers = getMarketDrivers(data);
+  const marketDriversHtml = marketDrivers.length
+    ? `    <section class="market-drivers" aria-label="Today's market drivers">
+      <h2 class="market-drivers-title">Today's Market Drivers</h2>
+      <ul class="driver-list">
+${renderMarketDrivers(marketDrivers)}
+      </ul>
+    </section>
+`
+    : '';
+
   indexHtml = indexHtml
     .replace('{{BIG_PICTURE}}', escapeHtml(data.bigPicture))
     .replace('{{MARKET_MOOD}}', escapeHtml(data.marketMood))
@@ -184,6 +242,7 @@ function main() {
     .replaceAll('{{FEAR_GREED_VALUE}}', fgValue)
     .replaceAll('{{FEAR_GREED_LABEL}}', fgLabel)
     .replaceAll('{{FEAR_GREED_CLASS}}', fgClass)
+    .replace('{{MARKET_DRIVERS_SECTION}}', marketDriversHtml)
     .replace('{{TOP_HEADLINES}}', renderTopHeadlines(data.topHeadlines || []))
     .replace('{{SEGMENTS}}', renderSegments(data.segments || []))
     .replace('{{ARCHIVE_LIST}}', archiveList)
@@ -192,7 +251,48 @@ function main() {
 
   fs.writeFileSync(path.join(ROOT, 'index.html'), indexHtml, 'utf8');
   console.log('Built index.html');
-  // Archives are created manually; no auto-generation of dated or archive.html
+
+  // Optional: build a dated archive page (e.g. node build/build.js 2026-02-05)
+  const archiveDate = process.argv[2];
+  if (archiveDate && /^\d{4}-\d{2}-\d{2}$/.test(archiveDate)) {
+    const archShort = dateToShort(archiveDate);
+    const archLabel = dateToLabel(archiveDate);
+    let archHtml = fs.readFileSync(ARCHIVE_TEMPLATE, 'utf8');
+    archHtml = archHtml
+      .replace('{{BIG_PICTURE}}', escapeHtml(data.bigPicture))
+      .replace('{{MARKET_MOOD}}', escapeHtml(data.marketMood))
+      .replaceAll('{{MARKET_MOOD_ARROW}}', moodArrow)
+      .replaceAll('{{MARKET_MOOD_CLASS}}', moodClass)
+      .replaceAll('{{FEAR_GREED_VALUE}}', fgValue)
+      .replaceAll('{{FEAR_GREED_LABEL}}', fgLabel)
+      .replaceAll('{{FEAR_GREED_CLASS}}', fgClass)
+      .replace('{{MARKET_DRIVERS_SECTION}}', marketDriversHtml)
+      .replace('{{TOP_HEADLINES}}', renderTopHeadlines(data.topHeadlines || []))
+      .replace('{{SEGMENTS}}', renderSegments(data.segments || []))
+      .replace('{{ARCHIVE_LIST}}', getArchiveList(archiveDate))
+      .replaceAll('{{DATE_SHORT}}', archShort)
+      .replaceAll('{{DATE_LABEL}}', archLabel);
+    fs.writeFileSync(path.join(ROOT, `${archiveDate}.html`), archHtml, 'utf8');
+    console.log('Built', `${archiveDate}.html`);
+    // Refresh index so archive list includes the new file
+    indexHtml = fs.readFileSync(INDEX_TEMPLATE, 'utf8');
+    indexHtml = indexHtml
+      .replace('{{BIG_PICTURE}}', escapeHtml(data.bigPicture))
+      .replace('{{MARKET_MOOD}}', escapeHtml(data.marketMood))
+      .replaceAll('{{MARKET_MOOD_ARROW}}', moodArrow)
+      .replaceAll('{{MARKET_MOOD_CLASS}}', moodClass)
+      .replaceAll('{{FEAR_GREED_VALUE}}', fgValue)
+      .replaceAll('{{FEAR_GREED_LABEL}}', fgLabel)
+      .replaceAll('{{FEAR_GREED_CLASS}}', fgClass)
+      .replace('{{MARKET_DRIVERS_SECTION}}', marketDriversHtml)
+      .replace('{{TOP_HEADLINES}}', renderTopHeadlines(data.topHeadlines || []))
+      .replace('{{SEGMENTS}}', renderSegments(data.segments || []))
+      .replace('{{ARCHIVE_LIST}}', getArchiveList())
+      .replaceAll('{{DATE_SHORT}}', dateShort)
+      .replaceAll('{{UPDATED_AT}}', escapeHtml(data.updatedAt || new Date().toISOString()));
+    fs.writeFileSync(path.join(ROOT, 'index.html'), indexHtml, 'utf8');
+    console.log('Updated index.html archive list');
+  }
 }
 
 main();
