@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Daily market briefing: headlines, Fear & Greed index, BTC/ETH prices, and market segment snapshots. Market intelligence, distilled.">
-  <title>xiiyaa.net — Market intelligence, distilled.</title>
+  <meta name="description" content="Daily briefing archive: headlines, Fear & Greed, crypto prices, and market segments for {{DATE_SHORT}}. Market intelligence, distilled.">
+  <title>Archive — {{DATE_SHORT}} — xiiyaa.net</title>
   <link rel="icon" type="image/png" href="favicon.png">
   <link rel="stylesheet" href="styles.css">
 </head>
@@ -26,23 +26,28 @@
       </a>
       <div class="header-right">
         <a href="blog.html" class="archive-link">Blog</a>
-        <a href="#archive" class="archive-link">Archive</a>
+        <a href="index.html#archive" class="archive-link">Archive</a>
         <button type="button" class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">Light</button>
       </div>
     </div>
     <div class="header-time-row">
-      <time id="local-time" class="local-time" datetime=""></time>
+      <span class="archive-date">{{DATE_SHORT}}</span>
     </div>
   </header>
 
   <main class="content">
+    <section class="archive-banner">
+      <h2>Daily Briefing</h2>
+      <p class="archive-date-label">{{DATE_LABEL}}</p>
+    </section>
+
     <section class="big-picture">
       <h2>Big Picture</h2>
       <p class="summary">{{BIG_PICTURE}}</p>
     </section>
 
     <section class="at-a-glance">
-      <div class="mood-card" data-updated-at="{{UPDATED_AT}}">
+      <div class="mood-card">
         <div class="mood-grid">
           <div class="mood-mood">
             <span class="mood-label">Market mood</span>
@@ -59,14 +64,12 @@
         </div>
         <div class="mood-footer">
           <span class="glance-time">Data as of {{DATE_SHORT}}</span>
-          <span class="mood-footer-sep" aria-hidden="true"> · </span>
-          <span id="update-countdown" class="update-countdown" aria-live="polite"></span>
         </div>
       </div>
     </section>
 
     <section class="news">
-      <h2>Business & Market Headlines</h2>
+      <h2>Top Headlines</h2>
       <ul class="headlines">
 {{TOP_HEADLINES}}
       </ul>
@@ -90,6 +93,7 @@
 
   <footer class="site-footer">
     <a href="#top" class="scroll-top">↑ Back to top</a>
+    <a href="index.html" class="footer-back">← Back to home</a>
     <div class="footer-brand">
       <img src="favicon.png" alt="" class="footer-logo">
       <span class="footer-copy">© 2026 xiiyaa.net — Market intelligence, distilled. <a href="mailto:xiiyaa13@gmail.com" class="footer-email">xiiyaa13@gmail.com</a></span>

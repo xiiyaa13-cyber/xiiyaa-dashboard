@@ -3,16 +3,26 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Daily briefing archive: headlines, Fear & Greed, crypto prices, and market segments for Feb 2, 2026. Market intelligence, distilled.">
   <title>Archive — Feb 2, 2026 — xiiyaa.net</title>
   <link rel="icon" type="image/png" href="favicon.png">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body id="top">
+  <div class="site-banner">
+    <a href="index.html" class="banner-link"><img src="banner.png" alt="xiiyaa.net — Market intelligence, distilled." class="banner-img"></a>
+  </div>
   <header class="site-header">
     <div class="header-nav">
       <a href="index.html" class="logo-link">
         <img src="favicon.png" alt="" class="site-logo">
-        <h1 class="site-name">xiiyaa.net</h1>
+        <div class="logo-text">
+          <div class="logo-title-row">
+            <h1 class="site-name">xiiyaa.net</h1>
+            <img src="chart-icon.svg" alt="" class="chart-icon">
+          </div>
+          <span class="site-tagline">Market intelligence, distilled.</span>
+        </div>
       </a>
       <div class="header-right">
         <a href="blog.html" class="archive-link">Blog</a>
@@ -37,30 +47,29 @@
     </section>
 
     <section class="at-a-glance">
-      <div class="glance-block">
-        <span class="glance-item"><strong>Market mood:</strong> <span class="glance-value">Risk-on</span></span>
-        <span class="glance-item"><strong>Fear & Greed:</strong> <span class="glance-value">61 <span class="glance-label">(Greed)</span></span></span>
-        <span class="glance-item"><strong>As of:</strong> <span class="glance-time">Feb 2, 2026</span></span>
+      <div class="mood-card">
+        <div class="mood-grid">
+          <div class="mood-mood">
+            <span class="mood-label">Market mood</span>
+            <span class="mood-value mood-arrow mood-risk-on">↑ Risk-on</span>
+          </div>
+          <div class="mood-fng">
+            <span class="mood-label">Fear & Greed Index</span>
+            <div class="fng-hero">
+              <span class="fng-number fng-greed">61</span>
+              <span class="fng-meter fng-greed" style="--fng: 61" role="img" aria-label="Fear and Greed: 61, Greed"><span class="fng-track"><span class="fng-fill"></span></span></span>
+              <span class="fng-label">Greed</span>
+            </div>
+          </div>
+        </div>
+        <div class="mood-footer">
+          <span class="glance-time">Data as of Feb 2, 2026</span>
+        </div>
       </div>
     </section>
 
     <section class="news">
-      <h2>Trending Market News</h2>
-      <ul class="headlines">
-        <li>Dow adds 515 points as indexes open February sharply higher</li>
-        <li>S&P 500 rises 0.5%, just misses new closing record</li>
-        <li>Memory stocks surge: SanDisk +15%, Western Digital +8%</li>
-        <li>Trump announces India trade deal; tariffs cut from 25% to 18%</li>
-        <li>Trump nominates Kevin Warsh to succeed Powell as Fed Chair</li>
-        <li>ISM manufacturing expands for first time in a year</li>
-        <li>Nvidia falls 3% as $100B OpenAI investment reportedly stalls</li>
-        <li>January jobs report delayed by partial government shutdown</li>
-      </ul>
-    </section>
-
-    <section class="news top-headlines">
       <h2>Top Headlines</h2>
-      <p class="section-desc">Leading stories from popular news sites.</p>
       <ul class="headlines">
         <li><span class="source">Investopedia</span> — Stock indexes end sharply higher; Dow adds 515 points, S&P just misses record</li>
         <li><span class="source">CNBC</span> — Dow surges 500 points as traders look past rout in metals, bitcoin</li>
@@ -115,6 +124,16 @@
         <p>Nasdaq +0.6%; Nvidia -3%, Oracle -2.8% weigh on select names.</p>
       </article>
     </section>
+
+    <section class="archive" id="archive">
+      <h2>Archive</h2>
+      <ul class="archive-list">
+        <li><a href="2026-02-04.html">February 4, 2026</a></li>
+        <li><a href="2026-02-03.html">February 3, 2026</a></li>
+        <li><a href="2026-02-02.html">February 2, 2026</a></li>
+      </ul>
+      <p class="archive-more">More daily briefings coming soon.</p>
+    </section>
   </main>
 
   <footer class="site-footer">
@@ -124,10 +143,10 @@
       <img src="favicon.png" alt="" class="footer-logo">
       <span class="footer-copy">© 2026 xiiyaa.net — Market intelligence, distilled. <a href="mailto:xiiyaa13@gmail.com" class="footer-email">xiiyaa13@gmail.com</a></span>
     </div>
-    <p class="footer-note">Updated daily. Data sources and automation coming soon.</p>
+    <p class="footer-charity">Koalas are on the brink of extinction. <a href="https://friendsofthekoala.org/">Support Friends of the Koala</a>.</p>
     <p class="disclaimer">Data for informational purposes only. Not financial advice.</p>
   </footer>
 
-  <script src="script.js?v=3"></script>
+  <script src="script.js?v=4"></script>
 </body>
 </html>

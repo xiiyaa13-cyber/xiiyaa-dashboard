@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 28 14" width="28" height="14" aria-hidden="true">
+  <defs>
+    <linearGradient id="chartGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#94c93d"/>
+      <stop offset="50%" stop-color="#e8b923"/>
+      <stop offset="100%" stop-color="#e85c4a"/>
+    </linearGradient>
+  </defs>
+  <path d="M0 11 L6 6 L12 9 L18 4 L24 7 L28 3" fill="none" stroke="url(#chartGrad)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

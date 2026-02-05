@@ -1,5 +1,5 @@
 {
-  "bigPicture": "Markets are consolidating. Add NEWS_API_KEY and other keys to enable live data. See README for setup.",
+  "bigPicture": "Today's focus: Software Stocks Are Now ‘Sentenced Before Trial,’ JPMorgan Says. Private payrolls rose by just 22,000 in January, far short of expectations, ADP says. Markets reacting to headlines.",
   "marketMood": "Risk-off",
   "fearGreed": {
     "value": 12,
@@ -12,40 +12,415 @@
   ],
   "topHeadlines": [
     {
-      "source": "Reuters",
-      "title": "Markets digest Fed decision"
+      "source": "Bloomberg",
+      "title": "Software Stocks Are Now ‘Sentenced Before Trial,’ JPMorgan Says - Bloomberg.com"
     },
     {
-      "source": "Bloomberg",
-      "title": "Add NEWS_API_KEY for live data"
+      "source": "CNBC",
+      "title": "Private payrolls rose by just 22,000 in January, far short of expectations, ADP says - CNBC"
+    },
+    {
+      "source": "The Wall Street Journal",
+      "title": "Texas Instruments to Acquire Silicon Labs in Deal Valued at $7.5 Billion - The Wall Street Journal"
+    },
+    {
+      "source": "BBC News",
+      "title": "Wegovy maker warns of 'painful' price cuts as shares plunge - BBC"
+    },
+    {
+      "source": "CNBC",
+      "title": "Yum Brands posts mixed quarter, Taco Bell shines - CNBC"
+    },
+    {
+      "source": "CNBC",
+      "title": "Eli Lilly blows past quarterly estimates, posts strong outlook as Zepbound and Mounjaro sales soar - CNBC"
+    },
+    {
+      "source": "Politico",
+      "title": "The Fed is more divided than ever. Enter Kevin Warsh. - Politico"
     }
   ],
   "segments": [
     {
       "name": "Global Markets",
-      "direction": "flat",
-      "description": "Add API keys for live data."
+      "direction": "down",
+      "description": "Session tone and regional risk. Data via Stooq.",
+      "regions": [
+        {
+          "label": "S&P 500",
+          "direction": "down",
+          "changePct": -0.8107259920496573,
+          "placeholder": false
+        },
+        {
+          "label": "Dow Jones",
+          "direction": "down",
+          "changePct": -0.7780805756616562,
+          "placeholder": false
+        },
+        {
+          "label": "Nasdaq",
+          "direction": "flat",
+          "placeholder": true
+        },
+        {
+          "label": "Euro Stoxx 50",
+          "direction": "flat",
+          "placeholder": true
+        },
+        {
+          "label": "DAX",
+          "direction": "flat",
+          "placeholder": true
+        },
+        {
+          "label": "Nikkei 225",
+          "direction": "flat",
+          "placeholder": true
+        },
+        {
+          "label": "Hang Seng",
+          "direction": "flat",
+          "changePct": 0.1412431482919036,
+          "placeholder": false
+        },
+        {
+          "label": "Shanghai Composite",
+          "direction": "flat",
+          "placeholder": true
+        },
+        {
+          "label": "VIX",
+          "direction": "steady",
+          "vixStyle": true,
+          "placeholder": true
+        }
+      ]
     },
     {
       "name": "Currencies",
       "direction": "flat",
-      "description": "Add API keys for live data."
+      "description": "Forex data temporarily unavailable.",
+      "tickers": [
+        {
+          "symbol": "DXY",
+          "name": "U.S. Dollar"
+        },
+        {
+          "symbol": "EUR/USD",
+          "name": "EUR/USD"
+        },
+        {
+          "symbol": "USD/JPY",
+          "name": "USD/JPY"
+        },
+        {
+          "symbol": "GBP/USD",
+          "name": "GBP/USD"
+        },
+        {
+          "symbol": "CNY/USD",
+          "name": "CNY/USD"
+        },
+        {
+          "symbol": "AUD/USD",
+          "name": "AUD/USD"
+        },
+        {
+          "symbol": "USD/CAD",
+          "name": "USD/CAD"
+        },
+        {
+          "symbol": "USD/CHF",
+          "name": "USD/CHF"
+        }
+      ]
+    },
+    {
+      "name": "Bonds & Rates",
+      "direction": "flat",
+      "description": "Government bonds and credit.",
+      "tickers": [
+        {
+          "symbol": "US10Y",
+          "name": "U.S. 10Y Treasury"
+        },
+        {
+          "symbol": "US2Y",
+          "name": "U.S. 2Y Treasury"
+        },
+        {
+          "symbol": "DE10Y",
+          "name": "German 10Y Bund"
+        },
+        {
+          "symbol": "DE2Y",
+          "name": "German 2Y Schatz"
+        },
+        {
+          "symbol": "JP10Y",
+          "name": "Japan 10Y Bond"
+        },
+        {
+          "symbol": "JP2Y",
+          "name": "Japan 2Y Bond"
+        },
+        {
+          "symbol": "CN10Y",
+          "name": "China 10Y Bond"
+        },
+        {
+          "symbol": "CN2Y",
+          "name": "China 2Y Bond"
+        },
+        {
+          "symbol": "TIP",
+          "name": "US TIPS"
+        },
+        {
+          "symbol": "TLT",
+          "name": "Long Duration Treasuries"
+        },
+        {
+          "symbol": "LQD",
+          "name": "Investment Grade Credit"
+        },
+        {
+          "symbol": "HYG",
+          "name": "High Yield Credit"
+        }
+      ]
     },
     {
       "name": "Digital Assets",
+      "direction": "down",
+      "description": "BTC -7.64%, ETH -6.85%. Fear & Greed for sentiment.",
+      "tickers": [
+        {
+          "symbol": "BTC/USD",
+          "name": "Bitcoin",
+          "price": 67908,
+          "changePct": -7.63701259328613
+        },
+        {
+          "symbol": "ETH/USD",
+          "name": "Ethereum",
+          "price": 1985.78,
+          "changePct": -6.849994980367585
+        },
+        {
+          "symbol": "DOGE",
+          "name": "Dogecoin"
+        },
+        {
+          "symbol": "SOL",
+          "name": "Solana"
+        },
+        {
+          "symbol": "XRP",
+          "name": "XRP"
+        },
+        {
+          "symbol": "ADA",
+          "name": "Cardano"
+        },
+        {
+          "symbol": "AVAX",
+          "name": "Avalanche"
+        }
+      ]
+    },
+    {
+      "name": "Commodities",
       "direction": "flat",
-      "description": "Add API keys for live data."
+      "description": "Precious metals, grains, and industrial commodities.",
+      "tickers": [
+        {
+          "symbol": "GOLD",
+          "name": "Gold"
+        },
+        {
+          "symbol": "XAG",
+          "name": "Silver"
+        },
+        {
+          "symbol": "COPPER",
+          "name": "Copper"
+        },
+        {
+          "symbol": "HG",
+          "name": "Copper"
+        },
+        {
+          "symbol": "WHEAT",
+          "name": "Wheat"
+        },
+        {
+          "symbol": "CORN",
+          "name": "Corn"
+        },
+        {
+          "symbol": "SOY",
+          "name": "Soybeans"
+        },
+        {
+          "symbol": "COFFEE",
+          "name": "Coffee"
+        },
+        {
+          "symbol": "BCOM",
+          "name": "Bloomberg Commodity"
+        }
+      ]
     },
     {
       "name": "Energy & Materials",
       "direction": "flat",
-      "description": "Add API keys for live data."
+      "description": "Energy data temporarily unavailable.",
+      "tickers": [
+        {
+          "symbol": "BRENT",
+          "name": "U.K. Oil"
+        },
+        {
+          "symbol": "WTI",
+          "name": "U.S. Oil"
+        },
+        {
+          "symbol": "NG",
+          "name": "U.S. Natural Gas"
+        },
+        {
+          "symbol": "TTF",
+          "name": "EU Natural Gas"
+        },
+        {
+          "symbol": "COAL",
+          "name": "Coal"
+        },
+        {
+          "symbol": "KRBN",
+          "name": "Carbon ETF"
+        }
+      ]
     },
     {
       "name": "U.S. Growth & Tech",
+      "direction": "down",
+      "description": "Nasdaq (QQQ) -1.75%. Growth under pressure.",
+      "tickers": [
+        {
+          "symbol": "AAPL",
+          "name": "Apple"
+        },
+        {
+          "symbol": "MSFT",
+          "name": "Microsoft"
+        },
+        {
+          "symbol": "TSLA",
+          "name": "Tesla"
+        },
+        {
+          "symbol": "AMZN",
+          "name": "Amazon"
+        },
+        {
+          "symbol": "GOOGL",
+          "name": "Google"
+        },
+        {
+          "symbol": "META",
+          "name": "Meta"
+        },
+        {
+          "symbol": "SMH",
+          "name": "VanEck Semiconductor ETF"
+        },
+        {
+          "symbol": "SOXX",
+          "name": "Semiconductors"
+        }
+      ]
+    },
+    {
+      "name": "Sector Performance",
       "direction": "flat",
-      "description": "Add API keys for live data."
+      "description": "S&P 500 sector ETFs.",
+      "tickers": [
+        {
+          "symbol": "XLK",
+          "name": "Technology"
+        },
+        {
+          "symbol": "XLF",
+          "name": "Financials"
+        },
+        {
+          "symbol": "XLE",
+          "name": "Energy"
+        },
+        {
+          "symbol": "XLV",
+          "name": "Health Care"
+        },
+        {
+          "symbol": "XLY",
+          "name": "Consumer Discretionary"
+        },
+        {
+          "symbol": "XLP",
+          "name": "Consumer Staples"
+        },
+        {
+          "symbol": "XLI",
+          "name": "Industrials"
+        },
+        {
+          "symbol": "XLB",
+          "name": "Materials"
+        },
+        {
+          "symbol": "XLU",
+          "name": "Utilities"
+        }
+      ]
+    },
+    {
+      "name": "Real Estate",
+      "direction": "flat",
+      "description": "REITs and property.",
+      "tickers": [
+        {
+          "symbol": "VNQ",
+          "name": "U.S. REITs"
+        },
+        {
+          "symbol": "REET",
+          "name": "Global Real Estate"
+        },
+        {
+          "symbol": "IYR",
+          "name": "Dow Jones REIT"
+        }
+      ]
+    },
+    {
+      "name": "Top Movers",
+      "direction": "flat",
+      "description": "Biggest gainers and losers.",
+      "tickers": [
+        {
+          "symbol": "▲",
+          "name": "Leading"
+        },
+        {
+          "symbol": "▼",
+          "name": "Lagging"
+        }
+      ]
     }
   ],
-  "updatedAt": "2026-02-05T08:01:47.083Z"
+  "updatedAt": "2026-02-05T17:05:17.077Z",
+  "date": "2026-02-05"
 }

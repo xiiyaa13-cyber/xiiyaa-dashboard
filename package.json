@@ -6,12 +6,14 @@
   "scripts": {
     "fetch": "node build/fetch-data.js",
     "build": "node build/build.js",
-    "update": "npm run fetch && npm run build"
+    "update": "npm run fetch && npm run build",
+    "serve": "npx --yes serve . -l 3000"
   },
   "engines": {
     "node": ">=18"
   },
   "dependencies": {
-    "dotenv": "^16.3.1"
+    "dotenv": "^16.3.1",
+    "yahoo-finance2": "^2.12.3"
   }
 }
