@@ -9,17 +9,15 @@ permissions:
 
 on:
   schedule:
-    # Run every 6 hours (00:00, 06:00, 12:00, 18:00 UTC)
-    - cron: '0 */6 * * *'
-  workflow_dispatch:  # Allow manual run from GitHub Actions tab
+    - cron: '0 13 * * *'
+  workflow_dispatch:
 
 jobs:
   update:
     if: github.actor != 'github-actions[bot]'
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout main
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v4
         with:
           ref: main
           fetch-depth: 0
@@ -27,11 +25,10 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
-          node-version: '20'
-          cache: 'npm'
+          node-version: 18
 
       - name: Install dependencies
-        run: npm ci || npm install
+        run: npm ci
 
       - name: Fetch and build
         env:
@@ -40,21 +37,13 @@ jobs:
           FMP_API_KEY: ${{ secrets.FMP_API_KEY }}
         run: npm run update
 
-      - name: Pull latest
-        run: git pull --rebase origin main
-
       - name: Commit and push
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
 
-          git fetch origin main
-          git rebase origin/main
-
           git add .
-          git diff --cached --quiet || git commit -m "chore: daily briefing update [skip ci]"
+          git diff --cached --quiet || git commit -m "chore: daily briefing update [skip ci]" || exit 0
 
-          git fetch origin main
-          git rebase origin/main
-
-          git push origin HEAD:main
+          git pull --rebase origin main
+          git push origin main
