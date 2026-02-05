@@ -44,10 +44,13 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
 
-          git fetch origin
-          git rebase origin/main || git rebase --abort
+          git fetch origin main
+          git rebase origin/main
 
           git add .
           git diff --cached --quiet || git commit -m "chore: daily briefing update [skip ci]"
+
+          git fetch origin main
+          git rebase origin/main
 
           git push origin HEAD:main
