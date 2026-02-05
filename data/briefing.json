@@ -2,7 +2,7 @@
   "bigPicture": "Markets are consolidating. Add NEWS_API_KEY and other keys to enable live data. See README for setup.",
   "marketMood": "Risk-off",
   "fearGreed": {
-    "value": 14,
+    "value": 12,
     "label": "Extreme Fear"
   },
   "trendingNews": [
@@ -47,5 +47,5 @@
       "description": "Add API keys for live data."
     }
   ],
-  "updatedAt": "2026-02-04T07:58:56.981Z"
+  "updatedAt": "2026-02-05T08:01:47.083Z"
 }
