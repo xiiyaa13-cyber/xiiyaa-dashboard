@@ -36,7 +36,8 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git pull origin main --rebase
+          git fetch origin
+          git pull --rebase origin main
           git add .
-          git commit -m "chore: daily briefing update" || echo "No changes to commit"
-          git push
+          git commit -m "chore: daily briefing update [skip ci]" || echo "No changes"
+          git push origin main

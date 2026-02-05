@@ -1,5 +1,5 @@
 {
-  "bigPicture": "Today's focus: Software Stocks Are Now ‘Sentenced Before Trial,’ JPMorgan Says. Private payrolls rose by just 22,000 in January, far short of expectations, ADP says. Markets reacting to headlines.",
+  "bigPicture": "Today's focus: S&P 500 falls for a second day after AMD earnings, weak jobs data: Live updates. October 10 liquidation event is still a major weight on bitcoin’s price as analysts eye the $70,000 level. Markets reacting to headlines.",
   "marketMood": "Risk-off",
   "fearGreed": {
     "value": 12,
@@ -12,32 +12,36 @@
   ],
   "topHeadlines": [
     {
+      "source": "CNBC",
+      "title": "S&P 500 falls for a second day after AMD earnings, weak jobs data: Live updates - CNBC"
+    },
+    {
+      "source": "Sherwood.news",
+      "title": "October 10 liquidation event is still a major weight on bitcoin’s price as analysts eye the $70,000 level - Sherwood News"
+    },
+    {
+      "source": "Tipranks.com",
+      "title": "Dow Jones Shrugs Off ‘Dramatic Slowdown in Job Creation’ - TipRanks"
+    },
+    {
+      "source": "NPR",
+      "title": "Bezos orders deep job cuts at 'Washington Post' - NPR"
+    },
+    {
+      "source": "Investor's Business Daily",
+      "title": "Uber Slides On Earnings Miss, Profit Guidance - Investor's Business Daily"
+    },
+    {
+      "source": "The Information",
+      "title": "Amazon Discusses Getting Special Access to OpenAI Tech - The Information"
+    },
+    {
       "source": "Bloomberg",
       "title": "Software Stocks Are Now ‘Sentenced Before Trial,’ JPMorgan Says - Bloomberg.com"
     },
     {
-      "source": "CNBC",
-      "title": "Private payrolls rose by just 22,000 in January, far short of expectations, ADP says - CNBC"
-    },
-    {
-      "source": "The Wall Street Journal",
-      "title": "Texas Instruments to Acquire Silicon Labs in Deal Valued at $7.5 Billion - The Wall Street Journal"
-    },
-    {
-      "source": "BBC News",
-      "title": "Wegovy maker warns of 'painful' price cuts as shares plunge - BBC"
-    },
-    {
-      "source": "CNBC",
-      "title": "Yum Brands posts mixed quarter, Taco Bell shines - CNBC"
-    },
-    {
-      "source": "CNBC",
-      "title": "Eli Lilly blows past quarterly estimates, posts strong outlook as Zepbound and Mounjaro sales soar - CNBC"
-    },
-    {
-      "source": "Politico",
-      "title": "The Fed is more divided than ever. Enter Kevin Warsh. - Politico"
+      "source": "Seeking Alpha",
+      "title": "Palantir in focus as HSBC upgrades after results, guidance (PLTR:NASDAQ) - Seeking Alpha"
     }
   ],
   "segments": [
@@ -49,13 +53,13 @@
         {
           "label": "S&P 500",
           "direction": "down",
-          "changePct": -0.8107259920496573,
+          "changePct": -0.7001592393704889,
           "placeholder": false
         },
         {
           "label": "Dow Jones",
           "direction": "down",
-          "changePct": -0.7780805756616562,
+          "changePct": -0.6658613006123083,
           "placeholder": false
         },
         {
@@ -99,8 +103,8 @@
     },
     {
       "name": "Currencies",
-      "direction": "flat",
-      "description": "Forex data temporarily unavailable.",
+      "direction": "up",
+      "description": "Dollar weakening.",
       "tickers": [
         {
           "symbol": "DXY",
@@ -194,19 +198,19 @@
     {
       "name": "Digital Assets",
       "direction": "down",
-      "description": "BTC -7.64%, ETH -6.85%. Fear & Greed for sentiment.",
+      "description": "BTC -7.65%, ETH -6.98%. Fear & Greed for sentiment.",
       "tickers": [
         {
           "symbol": "BTC/USD",
           "name": "Bitcoin",
-          "price": 67908,
-          "changePct": -7.63701259328613
+          "price": 66765,
+          "changePct": -7.646569168603835
         },
         {
           "symbol": "ETH/USD",
           "name": "Ethereum",
-          "price": 1985.78,
-          "changePct": -6.849994980367585
+          "price": 1963.53,
+          "changePct": -6.9788480535453505
         },
         {
           "symbol": "DOGE",
@@ -306,8 +310,8 @@
     },
     {
       "name": "U.S. Growth & Tech",
-      "direction": "down",
-      "description": "Nasdaq (QQQ) -1.75%. Growth under pressure.",
+      "direction": "flat",
+      "description": "Tech data temporarily unavailable.",
       "tickers": [
         {
           "symbol": "AAPL",
@@ -421,6 +425,6 @@
       ]
     }
   ],
-  "updatedAt": "2026-02-05T17:05:17.077Z",
+  "updatedAt": "2026-02-05T17:54:29.196Z",
   "date": "2026-02-05"
 }
