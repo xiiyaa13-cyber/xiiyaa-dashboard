@@ -29,13 +29,13 @@
         {
           "label": "S&P 500",
           "direction": "flat",
-          "changePct": 0.08093361979638894,
+          "changePct": 0.04990662631205918,
           "placeholder": false
         },
         {
           "label": "Dow Jones",
           "direction": "flat",
-          "changePct": 0.00004044327445897733,
+          "changePct": 0.09898491425418575,
           "placeholder": false
         },
         {
@@ -174,19 +174,19 @@
     {
       "name": "Digital Assets",
       "direction": "up",
-      "description": "BTC +0.73%, ETH +2.36%. Fear & Greed for sentiment.",
+      "description": "BTC +3.34%, ETH +5.31%. Fear & Greed for sentiment.",
       "tickers": [
         {
           "symbol": "BTC/USD",
           "name": "Bitcoin",
-          "price": 68316,
-          "changePct": 0.730462650550743
+          "price": 69398,
+          "changePct": 3.3433462924141106
         },
         {
           "symbol": "ETH/USD",
           "name": "Ethereum",
-          "price": 2019.81,
-          "changePct": 2.3600663398188395
+          "price": 2071.68,
+          "changePct": 5.311979566558265
         },
         {
           "symbol": "DOGE",
@@ -401,6 +401,6 @@
       ]
     }
   ],
-  "updatedAt": "2026-02-13T15:27:22.105Z",
-  "date": "2026-02-13"
+  "updatedAt": "2026-02-14T14:04:26.815Z",
+  "date": "2026-02-14"
 }
