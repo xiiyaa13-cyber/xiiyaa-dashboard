@@ -2,7 +2,7 @@
   "bigPicture": "Markets are consolidating. Add NEWS_API_KEY for live headlines. See README for setup.",
   "marketMood": "Risk-off",
   "fearGreed": {
-    "value": 9,
+    "value": 7,
     "label": "Extreme Fear"
   },
   "trendingNews": [
@@ -23,19 +23,19 @@
   "segments": [
     {
       "name": "Global Markets",
-      "direction": "flat",
+      "direction": "down",
       "description": "Session tone and regional risk. Data via Stooq.",
       "regions": [
         {
           "label": "S&P 500",
-          "direction": "down",
-          "changePct": -0.16682869976792897,
+          "direction": "up",
+          "changePct": 0.3209028416369182,
           "placeholder": false
         },
         {
           "label": "Dow Jones",
-          "direction": "down",
-          "changePct": -0.2736462364279349,
+          "direction": "up",
+          "changePct": 0.25591576178717956,
           "placeholder": false
         },
         {
@@ -60,8 +60,8 @@
         },
         {
           "label": "Hang Seng",
-          "direction": "up",
-          "changePct": 0.5225255880200779,
+          "direction": "down",
+          "changePct": -1.095598956636614,
           "placeholder": false
         },
         {
@@ -173,20 +173,20 @@
     },
     {
       "name": "Digital Assets",
-      "direction": "down",
-      "description": "BTC -1.93%, ETH -3.27%. Fear & Greed for sentiment.",
+      "direction": "up",
+      "description": "BTC +1.44%, ETH +1.27%. Fear & Greed for sentiment.",
       "tickers": [
         {
           "symbol": "BTC/USD",
           "name": "Bitcoin",
-          "price": 66101,
-          "changePct": -1.9295499612577642
+          "price": 67353,
+          "changePct": 1.4372698534618862
         },
         {
           "symbol": "ETH/USD",
           "name": "Ethereum",
-          "price": 1918.47,
-          "changePct": -3.268640017805713
+          "price": 1958.61,
+          "changePct": 1.2701380381982255
         },
         {
           "symbol": "DOGE",
@@ -401,6 +401,6 @@
       ]
     }
   ],
-  "updatedAt": "2026-02-19T15:33:33.632Z",
-  "date": "2026-02-19"
+  "updatedAt": "2026-02-20T15:10:18.008Z",
+  "date": "2026-02-20"
 }
