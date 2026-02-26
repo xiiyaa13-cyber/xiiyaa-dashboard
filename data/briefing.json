@@ -23,18 +23,20 @@
   "segments": [
     {
       "name": "Global Markets",
-      "direction": "flat",
-      "description": "Session tone and regional risk across major indices.",
+      "direction": "down",
+      "description": "Session tone and regional risk. Data via Stooq.",
       "regions": [
         {
           "label": "S&P 500",
-          "direction": "flat",
-          "placeholder": true
+          "direction": "down",
+          "changePct": -0.7159382274734344,
+          "placeholder": false
         },
         {
           "label": "Dow Jones",
           "direction": "flat",
-          "placeholder": true
+          "changePct": 0.1127477282211886,
+          "placeholder": false
         },
         {
           "label": "Nasdaq",
@@ -58,8 +60,9 @@
         },
         {
           "label": "Hang Seng",
-          "direction": "flat",
-          "placeholder": true
+          "direction": "down",
+          "changePct": -1.437286200408585,
+          "placeholder": false
         },
         {
           "label": "Shanghai Composite",
@@ -170,20 +173,20 @@
     },
     {
       "name": "Digital Assets",
-      "direction": "up",
-      "description": "BTC +6.59%, ETH +10.56%. Fear & Greed for sentiment.",
+      "direction": "flat",
+      "description": "BTC -0.42%, ETH +0.39%. Fear & Greed for sentiment.",
       "tickers": [
         {
           "symbol": "BTC/USD",
           "name": "Bitcoin",
-          "price": 68081,
-          "changePct": 6.588783070232494
+          "price": 67160,
+          "changePct": -0.4211354252840223
         },
         {
           "symbol": "ETH/USD",
           "name": "Ethereum",
-          "price": 2041.11,
-          "changePct": 10.555252398971625
+          "price": 2025.67,
+          "changePct": 0.3855510185603282
         },
         {
           "symbol": "DOGE",
@@ -398,6 +401,6 @@
       ]
     }
   ],
-  "updatedAt": "2026-02-25T16:52:30.542Z",
-  "date": "2026-02-25"
+  "updatedAt": "2026-02-26T16:08:36.897Z",
+  "date": "2026-02-26"
 }
