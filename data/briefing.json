@@ -2,7 +2,7 @@
   "bigPicture": "Markets are consolidating. Add NEWS_API_KEY for live headlines. See README for setup.",
   "marketMood": "Risk-off",
   "fearGreed": {
-    "value": 15,
+    "value": 18,
     "label": "Extreme Fear"
   },
   "trendingNews": [
@@ -23,19 +23,19 @@
   "segments": [
     {
       "name": "Global Markets",
-      "direction": "flat",
+      "direction": "down",
       "description": "Session tone and regional risk. Data via Stooq.",
       "regions": [
         {
           "label": "S&P 500",
-          "direction": "up",
-          "changePct": 0.2794375269115404,
+          "direction": "down",
+          "changePct": -0.8816671094188107,
           "placeholder": false
         },
         {
           "label": "Dow Jones",
           "direction": "down",
-          "changePct": -0.2975275282136596,
+          "changePct": -0.9657662703905034,
           "placeholder": false
         },
         {
@@ -61,7 +61,7 @@
         {
           "label": "Hang Seng",
           "direction": "down",
-          "changePct": -0.23551708596721502,
+          "changePct": -0.7027363472228014,
           "placeholder": false
         },
         {
@@ -174,19 +174,19 @@
     {
       "name": "Digital Assets",
       "direction": "up",
-      "description": "BTC +0.57%, ETH +1.22%. Fear & Greed for sentiment.",
+      "description": "BTC +0.15%, ETH +0.90%. Fear & Greed for sentiment.",
       "tickers": [
         {
           "symbol": "BTC/USD",
           "name": "Bitcoin",
-          "price": 70403,
-          "changePct": 0.5688595292216777
+          "price": 70278,
+          "changePct": 0.14621500631594073
         },
         {
           "symbol": "ETH/USD",
           "name": "Ethereum",
-          "price": 2058.77,
-          "changePct": 1.2202302635086724
+          "price": 2077.09,
+          "changePct": 0.9002567999666407
         },
         {
           "symbol": "DOGE",
@@ -401,6 +401,6 @@
       ]
     }
   ],
-  "updatedAt": "2026-03-11T14:06:55.689Z",
-  "date": "2026-03-11"
+  "updatedAt": "2026-03-12T14:04:40.078Z",
+  "date": "2026-03-12"
 }
