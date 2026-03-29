@@ -2,7 +2,7 @@
   "bigPicture": "Markets are consolidating. Add NEWS_API_KEY for live headlines. See README for setup.",
   "marketMood": "Risk-off",
   "fearGreed": {
-    "value": 12,
+    "value": 9,
     "label": "Extreme Fear"
   },
   "trendingNews": [
@@ -23,20 +23,18 @@
   "segments": [
     {
       "name": "Global Markets",
-      "direction": "down",
-      "description": "Session tone and regional risk. Data via Stooq.",
+      "direction": "flat",
+      "description": "Session tone and regional risk across major indices.",
       "regions": [
         {
           "label": "S&P 500",
-          "direction": "down",
-          "changePct": -1.6721834878249031,
-          "placeholder": false
+          "direction": "flat",
+          "placeholder": true
         },
         {
           "label": "Dow Jones",
-          "direction": "down",
-          "changePct": -1.7264318993144296,
-          "placeholder": false
+          "direction": "flat",
+          "placeholder": true
         },
         {
           "label": "Nasdaq",
@@ -60,9 +58,8 @@
         },
         {
           "label": "Hang Seng",
-          "direction": "up",
-          "changePct": 0.38400526543836233,
-          "placeholder": false
+          "direction": "flat",
+          "placeholder": true
         },
         {
           "label": "Shanghai Composite",
@@ -173,20 +170,20 @@
     },
     {
       "name": "Digital Assets",
-      "direction": "up",
-      "description": "BTC +0.89%, ETH +2.29%. Fear & Greed for sentiment.",
+      "direction": "down",
+      "description": "BTC -0.37%, ETH -1.75%. Fear & Greed for sentiment.",
       "tickers": [
         {
           "symbol": "BTC/USD",
           "name": "Bitcoin",
-          "price": 66802,
-          "changePct": 0.8871859080934796
+          "price": 66581,
+          "changePct": -0.3660170476073836
         },
         {
           "symbol": "ETH/USD",
           "name": "Ethereum",
-          "price": 2024.82,
-          "changePct": 2.290149362170421
+          "price": 1989.44,
+          "changePct": -1.7544825516060982
         },
         {
           "symbol": "DOGE",
@@ -401,6 +398,6 @@
       ]
     }
   ],
-  "updatedAt": "2026-03-28T13:52:47.605Z",
-  "date": "2026-03-28"
+  "updatedAt": "2026-03-29T13:54:35.821Z",
+  "date": "2026-03-29"
 }
