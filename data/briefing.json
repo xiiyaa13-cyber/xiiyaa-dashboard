@@ -171,19 +171,19 @@
     {
       "name": "Digital Assets",
       "direction": "down",
-      "description": "BTC -5.05%, ETH -10.59%. Fear & Greed for sentiment.",
+      "description": "BTC +0.16%, ETH -3.06%. Fear & Greed for sentiment.",
       "tickers": [
         {
           "symbol": "BTC/USD",
           "name": "Bitcoin",
-          "price": 60517,
-          "changePct": -5.04977149985873
+          "price": 60919,
+          "changePct": 0.16091954969157074
         },
         {
           "symbol": "ETH/USD",
           "name": "Ethereum",
-          "price": 1583.71,
-          "changePct": -10.59327489107166
+          "price": 1561.93,
+          "changePct": -3.0603848572055647
         },
         {
           "symbol": "DOGE",
@@ -398,6 +398,6 @@
       ]
     }
   ],
-  "updatedAt": "2026-06-05T15:55:56.150Z",
-  "date": "2026-06-05"
+  "updatedAt": "2026-06-06T14:42:46.079Z",
+  "date": "2026-06-06"
 }
