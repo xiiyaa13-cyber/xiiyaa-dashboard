@@ -2,7 +2,7 @@
   "bigPicture": "Markets are consolidating. Add NEWS_API_KEY for live headlines. See README for setup.",
   "marketMood": "Risk-off",
   "fearGreed": {
-    "value": 13,
+    "value": 10,
     "label": "Extreme Fear"
   },
   "trendingNews": [
@@ -171,19 +171,19 @@
     {
       "name": "Digital Assets",
       "direction": "down",
-      "description": "BTC -4.21%, ETH -5.00%. Fear & Greed for sentiment.",
+      "description": "BTC -0.81%, ETH -0.36%. Fear & Greed for sentiment.",
       "tickers": [
         {
           "symbol": "BTC/USD",
           "name": "Bitcoin",
-          "price": 65935,
-          "changePct": -4.20648471008463
+          "price": 64996,
+          "changePct": -0.8092160751908426
         },
         {
           "symbol": "ETH/USD",
           "name": "Ethereum",
-          "price": 1842.26,
-          "changePct": -5.004051588144383
+          "price": 1823.02,
+          "changePct": -0.3583084860695709
         },
         {
           "symbol": "DOGE",
@@ -398,6 +398,6 @@
       ]
     }
   ],
-  "updatedAt": "2026-11-14T18:39:57.259Z",
-  "date": "2026-11-14"
+  "updatedAt": "2026-11-15T19:16:09.531Z",
+  "date": "2026-11-15"
 }
